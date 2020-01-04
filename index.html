@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Pour permettre aux lecteurs d'écrans de lire la page en Français !-->
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Structure permettant l'accessibilité -->
+  <header role="banner">
+    <a href="#nav" id="skipToMenu" class="skiptocontent">Skip To Keyboard Navigation</a>
+    <img src="images/w3c.png" alt="W3C Logo">
+    <!-- Pas de saut dans la hierarchie des titres ! -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+    <nav role="navigation">
+
+    </nav>
+  </header>
+  <main role="main">
+
+    <!-- exemple d'un formulaire non adapté à un lecteur d'écran ! -->
+    <form>
+      <fieldset>
+        <legend>
+          Connection
+        </legend>
+
+        <div>
+          <label>Identifiant</label>
+          <input type="text" id="txtIdentifant">
+        </div>
+
+        <div>
+          <label>Mot de passe</label>
+          <input type="password" id="txtMotDePasse">
+        </div>
+        <div>
+          <input type="checkbox" id="chkSeSouvenirDeMoi">
+          <label>Se souvenir de moi ?</label>
+        </div>
+
+        <input type="submit" id="btnEnvoyer" value="Connection">
+      </fieldset>
+    </form>
+
+     <!-- Formulaire visuellement identique mais adapté à un lecteur d'écran ! -->
+     <form role="form">
+      <fieldset>
+        <legend>
+          Connection
+        </legend>
+
+        <div>
+          <label for="txtIdentifant">Identifiant</label>
+          <input type="text" id="txtIdentifant">
+        </div>
+
+        <div>
+          <label for="txtMotDePasse">Mot de passe</label>
+          <input type="password" id="txtMotDePasse">
+        </div>
+        <div>
+          <input type="checkbox" id="chkSeSouvenirDeMoi">
+          <label for="chkSeSouvenirDeMoi">Se souvenir de moi ?</label>
+        </div>
+
+        <input type="submit" id="btnEnvoyer" value="Connection" title="Se connecter">
+      </fieldset>
+    </form>
+
+    <!-- Boutons non accessibles (Le lecteur d'écranles types de paiements possibles) -->
+
+    <h1>Choisir votre moyen de paiement</h1>
+    <button><img src="images/visa.PNG"></button>
+    <button><img src="images/paypal.PNG"></button>
+    
+
+     <!-- Boutons accessibles (Le lecteur d'écran lira les types de paiements possibles) -->
+
+     <h1>Choisir votre moyen de paiement</h1>
+     <button aria-label="Payez avec Visa"><img src="images/visa.PNG" alt=""></button>
+     <button title="Payez avec paypal"><img src="images/paypal.PNG" alt=""></button>
+
+  </main>
+  <footer role="contentinfo">
+
+  </footer>
+</body>
+
+</html>
